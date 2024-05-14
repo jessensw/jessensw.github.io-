@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertanyaan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Apakah anda ingin dia kembali?</h1>
+        <button onclick="jawab('y')">y</button>
+        <button onclick="jawab('n')">n</button>
+        <p id="response"></p>
+    </div>
+
+    <script>
+        function jawab(jawaban) {
+            var responseText;
+            if (jawaban === 'n') {
+                responseText = "Baguss udah sadar";
+            } else if (jawaban === 'y') {
+                responseText = "Lihat lah manusia tolol satu ini, lu sih bego banget, lu ngga inget yang kemaren kemaren, sadar tolol,";
+            } else {
+                responseText = "Jawaban tidak valid, silakan masukkan 'y' atau 'n'.";
+            }
+            document.getElementById('response').innerText = responseText;
+        }
+    </script>
+</body>
+</html>
